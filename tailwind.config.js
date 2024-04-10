@@ -25,6 +25,25 @@ module.exports = {
     },
     typography: require("./typography"),
     extend: {
+      colors: {
+        lighterDark: "#0F172A",
+        dark: "#0B1120",
+      },
+      boxShadow: {
+        glow: "0 0 4px rgb(0 0 0 / 0.1)",
+      },
+      maxWidth: {
+        lg: "33rem",
+        "2xl": "40rem",
+        "3xl": "50rem",
+        "5xl": "66rem",
+      },
+      opacity: {
+        1: "0.01",
+        2.5: "0.025",
+        7.5: "0.075",
+        15: "0.15",
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
@@ -32,5 +51,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
